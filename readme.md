@@ -1,128 +1,110 @@
-<h1 align=center>Astro + Tailwind CSS + TypeScript Starter and Boilerplate</h1>
+# Stablo - Astro Blog Template with MDX
 
-<p align=center>Astroplate is a free starter template built with Astro, TailwindCSS & TypeScript, providing everything you need to jumpstart your Astro project and save valuable time.</p>
+Stablo Astro is an Astro version of [Stablo - Next.js Blog Template](https://stablo-pro.web3templates.com/), #1 template for Next.js & Sanity CMS. This is an Astro version of the same template.
 
-<p align=center>Made with ♥ by <a href="https://zeon.studio/">Zeon Studio</a></p>
+This free template is sponsored by [Web3Templates](https://web3templates.com)
 
-<p align=center> If you find this project useful, please give it a ⭐ to show your support. </p>
+## Live Demo
 
-<h2 align="center"> <a target="_blank" href="https://zeon.studio/preview?project=astroplate" rel="nofollow">👀 Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/analysis/https-astroplate-netlify-app/yzx3foum3w?form_factor=desktop">Page Speed (100%)🚀</a>
-</h2>
+### [https://stablo-astro.web3templates.com/](https://stablo-astro.web3templates.com/)
 
-<p align=center>
-  <a href="https://github.com/withastro/astro/releases/tag/astro%404.3.2" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=ASTRO&message=4.3&color=000&logo=astro" />
-  </a>
+### [Download Stablo Astro Template](https://web3templates.com/templates/stablo-minimal-blog-website-template)
 
-  <a href="https://github.com/zeon-studio/astroplate/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/zeon-studio/astroplate" alt="license"></a>
+## Deploy on Vercel
 
-  <img src="https://img.shields.io/github/languages/code-size/zeon-studio/astroplate" alt="code size">
+Click the below link to deploy this template on Vercel
 
-  <a href="https://github.com/zeon-studio/astroplate/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/zeon-studio/astroplate" alt="contributors"></a>
-</p>
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=hhttps://github.com/web3templates/stablo-astro&project-name=stablo-astro&repository-name=stablo-astro&demo-title=Stablo%20Astro%20Blog%20Template&demo-description=Stablo%20Astro%20is%20a%20starter%20blog%20template%20for%20Astro%20built%20with%20MDX%20&%20TailwindCSS&demo-url=https%3A%2F%2Fstablo-astro.web3templates.com%2F&demo-image=https://user-images.githubusercontent.com/1884712/169838344-e32b7426-621a-45a4-aba8-afedf3377e1f.jpeg)
 
-## 📌 Key Features
+![Screenshot](https://user-images.githubusercontent.com/1884712/210131622-59ac9ff8-43fe-4a7d-b7fc-8b3b981baa52.png)
 
-- 👥 Multi-Authors
-- 🎯 Similar Posts Suggestion
-- 🔍 Search Functionality
-- 🌑 Dark Mode
-- 🏷️ Tags & Categories
-- 🔗 Netlify setting pre-configured
-- 📞 Support contact form
-- 📱 Fully responsive
-- 📝 Write and update content in Markdown / MDX
-- 💬 Disqus Comment
-- 🔳 Syntax Highlighting
+## Installation
 
-### 📄 15+ Pre-designed Pages
+If you are reading this on github, you can click on the "Use this template" button above to create a new repository from astroship to your account. Then you can do a `git clone` to clone it to your local system.
 
-- 🏠 Homepage
-- 👤 About
-- 📞 Contact
-- 👥 Authors
-- 👤 Author Single
-- 📝 Blog
-- 📝 Blog Single
-- 🚫 Custom 404
-- 💡 Elements
-- 📄 Privacy Policy
-- 🏷️ Tags
-- 🏷️ Tag Single
-- 🗂️ Categories
-- 🗂️ Category Single
-- 🔍 Search
+Alternatively, you can clone the project directly from this repo to your local system.
 
-## 🔗 Integrations
+### 1. Clone the repo
 
-- astro/react
-- astro/sitemap
-- astro/tailwind
+```bash
+git clone https://github.com/web3templates/stablo-astro.git myProjectName
+# or
+git clone https://github.com/web3templates/stablo-astro.git .
+```
 
-## 🚀 Getting Started
+The `.` will clone it to the current directory so make sure you are inside your project folder first.
 
-### 📦 Dependencies
-
-- astro 4.0+
-- node v20.10+
-- npm v10.2+
-- tailwind v3.3+
-
-### 👉 Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
+# or
+yarn install
+# or (recommended)
+pnpm install
 ```
 
-### 👉 Development Command
+### 3. Start development Server
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or (recommended)
+pnpm dev
 ```
 
-### 👉 Build Command
+### Preview & Build
 
 ```bash
 npm run build
+npm run preview
+# or
+yarn build
+yarn preview
+# or (recommended)
+pnpm build
+pnpm preview
 ```
 
-### 👉 Build and Run With Docker
+We recommend using [pnpm](https://pnpm.io/) to save disk space on your computer.
+
+### Other Commands
 
 ```bash
-docker build -t astroplate .
-# or
-# docker --build-arg INSTALLER=npm build -t astroplate .
-# or
-# docker --build-arg INSTALLER=pnpm build -t astroplate .
-
-docker run -p 3000:80 astroplate
-# or
-# docker run --rm -p 3000:80 astroplate
+pnpm astro ...
+pnpm astro add
+pnpm astro --help
 ```
 
-To access the shell within the container:
+## Project Structure
 
-```bash
-docker run -it --rm astroplate ash
+Inside of your Astro project, you'll see the following folders and files:
+
+```
+/
+├── public/
+│   └── ...
+├── src/
+│   ├── components/
+│   │   └── ...
+│   ├── layouts/
+│   │   └── ...
+│   └── pages/
+│       └── ...
+└── package.json
 ```
 
-<!-- reporting issue -->
-## 🐞 Reporting Issues
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-We use GitHub Issues as the official bug tracker for this Template. Please Search [existing issues](https://github.com/zeon-studio/astroplate/issues). It’s possible someone has already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/zeon-studio/astroplate/issues).
+Any static assets, like images, can be placed in the `public/` directory.
 
-<!-- licence -->
-## 📝 License
+## TailwindCSS
 
-Copyright (c) 2023 - Present, Designed & Developed by [Zeon Studio](https://zeon.studio/)
+TailwindCSS is already configured in this repo, so you can start using them without any installation.
 
-**Code License:** Released under the [MIT](https://github.comzeon-studio/astroplate/blob/main/LICENSE) license.
+## 👀 Want to learn more?
 
-**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
+Feel free to check out [Astro Docs](https://docs.astro.build) or jump into our [Discord Chat](https://web3templates.com/discord).
 
-## 💻 Need Custom Development Services?
-
-If you need a custom theme, theme customization, or complete website development services from scratch you can [Hire Us](https://zeon.studio/).
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)

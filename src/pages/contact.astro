@@ -1,65 +1,49 @@
 ---
-import config from "@/config/config.json";
-import Base from "@/layouts/Base.astro";
-import PageHeader from "@/partials/PageHeader.astro";
-import { getEntry } from "astro:content";
-
-const contact = await getEntry("contact", "-index");
-const { contact_form_action }: { contact_form_action: string } = config.params;
-const { title, description, meta_title, image } = contact.data;
+import { Icon } from "astro-icon/components";
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Contactform from "@/components/contactform.astro";
+import Pagetitle from "@/components/pagetitle.astro";
 ---
 
-<Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={image}
->
-  <PageHeader title={title} />
-  <section class="section-sm">
-    <div class="container">
-      <div class="row">
-        <div class="mx-auto md:col-10 lg:col-6">
-          <form action={contact_form_action} method="POST">
-            <div class="mb-6">
-              <label for="name" class="form-label">
-                Full Name <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                class="form-input"
-                placeholder="John Doe"
-                type="text"
-              />
-            </div>
-            <div class="mb-6">
-              <label for="email" class="form-label">
-                Working Mail <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="email"
-                name="email"
-                class="form-input"
-                placeholder="john.doe@email.com"
-                type="email"
-              />
-            </div>
-            <div class="mb-6">
-              <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                class="form-input"
-                placeholder="Message goes here..."
-                rows="8"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+<Layout title="Contact">
+  <Container>
+    <Pagetitle>
+      <Fragment slot="title">Contact</Fragment>
+      <Fragment slot="desc">We are a here to help.</Fragment>
+    </Pagetitle>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800 dark:text-gray-200">
+          Contact Stablo
+        </h2>
+        <p
+          class="text-lg leading-relaxed text-gray-500 dark:text-gray-400 mt-3">
+          Have something to say? We are here to help. Fill up the form or send
+          email or call phone.
+        </p>
+        <div class="mt-5">
+          <div
+            class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-300">
+            <Icon class="text-gray-400 w-4 h-4" name="heroicons:map-pin" />
+            <span>1734 Sanfransico, CA 93063</span>
+          </div><div
+            class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-300">
+            <Icon class="text-gray-400 w-4 h-4" name="heroicons:envelope" /><a
+              href="mailto:hello@stablotemplate.com">hello@stablotemplate.com</a
+            >
+          </div><div
+            class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-300">
+            <Icon class="text-gray-400 w-4 h-4" name="heroicons:phone" /><a
+              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
+            >
+          </div>
         </div>
       </div>
+      <div>
+        <Contactform />
+      </div>
     </div>
-  </section>
-</Base>
+  </Container>
+</Layout>
